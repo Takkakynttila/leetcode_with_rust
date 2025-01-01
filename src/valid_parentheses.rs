@@ -2,12 +2,13 @@
 pub fn is_valid(s: String) -> bool {
     use std::collections::VecDeque;
     let mut deque = VecDeque::new();
+    let mut target: Option<char>;
     for c in s.chars() {
-
         match c {
             '(' | '[' | '{' => deque.push_front(c),
             ')' => {
-                let target = deque.pop_front();
+
+                target = deque.pop_front();
                 
                 if target.is_none() {
                     return false;
@@ -18,7 +19,8 @@ pub fn is_valid(s: String) -> bool {
                 }
             }
             ']' => {
-                let target = deque.pop_front();
+
+                target = deque.pop_front();
 
                 if target.is_none() {
                     return false;
@@ -29,7 +31,8 @@ pub fn is_valid(s: String) -> bool {
                 }
             }
             '}' => {
-                let target = deque.pop_front();
+
+                target = deque.pop_front();
 
                 if target.is_none() {
                     return false;
