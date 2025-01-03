@@ -7,9 +7,8 @@ pub fn is_valid(s: String) -> bool {
         match c {
             '(' | '[' | '{' => deque.push_front(c),
             ')' => {
-
                 target = deque.pop_front();
-                
+
                 if target.is_none() {
                     return false;
                 }
@@ -19,7 +18,6 @@ pub fn is_valid(s: String) -> bool {
                 }
             }
             ']' => {
-
                 target = deque.pop_front();
 
                 if target.is_none() {
@@ -31,7 +29,6 @@ pub fn is_valid(s: String) -> bool {
                 }
             }
             '}' => {
-
                 target = deque.pop_front();
 
                 if target.is_none() {
