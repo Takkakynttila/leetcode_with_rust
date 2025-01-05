@@ -1,0 +1,4 @@
+- Add files to src/
+- Add modules to lib.rs
+- run with cargo commands
+    - run test with cargo test
