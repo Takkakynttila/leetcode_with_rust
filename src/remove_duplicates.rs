@@ -8,7 +8,7 @@ pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
     for (ind, val) in nums.iter_mut().enumerate() {
         if ind == 0 {
             prev = Some(*val);
-            continue
+            continue;
         }
         if *val == prev.unwrap() {
             indices.push(ind);
@@ -17,7 +17,7 @@ pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
     }
     indices.reverse();
     let mut k = nums.len();
-    for i in  indices {
+    for i in indices {
         let val = nums.remove(i);
         nums.push(val);
         k -= 1
@@ -31,13 +31,13 @@ mod tests {
     use super::*;
     #[test]
     fn test_remove_duplicates_short() {
-        let mut nums = vec![1,1,2];
+        let mut nums = vec![1, 1, 2];
         let res = remove_duplicates(&mut nums);
         assert_eq!(res, 2);
     }
     #[test]
     fn test_remove_duplicates() {
-        let mut nums = vec![0,0,1,1,1,2,2,3,3,4];
+        let mut nums = vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
         let res = remove_duplicates(&mut nums);
         assert_eq!(res, 5);
     }
