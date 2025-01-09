@@ -4,3 +4,4 @@ mod remove_duplicates;
 mod remove_element;
 mod searc_insert_pos;
 mod valid_parentheses;
+mod length_of_last_word;
