@@ -40,16 +40,16 @@ mod tests {
     }
     #[test]
     fn test_plus_one_larger() {
-        let digits = vec![4,3,2,1];
-        let output = vec![4,3,2,2];
+        let digits = vec![4, 3, 2, 1];
+        let output = vec![4, 3, 2, 2];
         let res = plus_one(digits);
         assert_eq!(res, output)
     }
 
     #[test]
     fn test_plus_one_larger_really_large() {
-        let digits = vec![9,8,7,6,5,4,3,2,1,0];
-        let output = vec![9,8,7,6,5,4,3,2,1,1];
+        let digits = vec![9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+        let output = vec![9, 8, 7, 6, 5, 4, 3, 2, 1, 1];
         let res = plus_one(digits);
         assert_eq!(res, output)
     }
